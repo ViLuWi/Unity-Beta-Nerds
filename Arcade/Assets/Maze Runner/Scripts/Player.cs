@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Keys")
         {
             Destroy(collision.gameObject);
-            score ++;
+            score++;
             keyAmount.text = "Keys: " + score;
         }
 
@@ -75,15 +75,19 @@ public class Player : MonoBehaviour
         }
 
         // door
-        if(collision.gameObject.tag == "Door" && score == 3) 
+        if (collision.gameObject.tag == "Door" && score == 3)
         {
             Destroy(collision.gameObject);
         }
         // Final Key
-        if(collision.gameObject.tag == "FinalKey") 
+        if (collision.gameObject.tag == "FinalKey")
         {
-            Debug.Log("You Win!");
             win.text = "You Win!";
+            if (Time.time >= 5)
+            {
+                print("JEtzt");
+            }
+            SceneManager.LoadScene(0);
         }
     }
 }
