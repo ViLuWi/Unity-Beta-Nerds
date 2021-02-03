@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class Player : MonoBehaviour
+public class MazeRunnerScript : MonoBehaviour
 {
     public float speed = 3f;
     public int score = 0;
     public Text keyAmount;
     public Text win;
-    // Start is called before the first frame update
+    [SerializeField]
+    public float MazeRunnerFinished = 0;
+    
     void Start()
     {
 
@@ -87,6 +89,8 @@ public class Player : MonoBehaviour
             {
                 print("JEtzt");
             }
+            MazeRunnerFinished = 1;
+            PlayerPrefs.SetFloat("MazeRunnerFinished", 1);
             SceneManager.LoadScene(0);
         }
     }

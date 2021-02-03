@@ -9,6 +9,7 @@ TagManager:
   - FinalKey
   - Enemy
   - Keys
+  - MazeRunner
   layers:
   - Default
   - TransparentFX

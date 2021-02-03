@@ -13,9 +13,18 @@ public class DoublePlayer : MonoBehaviour
     private float _gravity = 5f;
     private float _directionY;
     private bool _canDoubleJump = false;
-    void Start()
+
+    IEnumerator Start()
     {
+        yield return null;
         _controller = GetComponent<CharacterController>();
+        var checkForMazeGame = PlayerPrefs.GetFloat("MazeRunnerFinished", 0);
+        if( checkForMazeGame == 1)
+        {
+            PlayerPrefs.DeleteAll();
+            GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(61.84f, 10.29f, -20.476f);
+            print("HHH");
+        }
     }
 
     // Update is called once per frame
@@ -25,7 +34,7 @@ public class DoublePlayer : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
         var rotatedDirection = transform.rotation * direction;
-        
+
         if (_controller.isGrounded)
         {
             _canDoubleJump = true;
