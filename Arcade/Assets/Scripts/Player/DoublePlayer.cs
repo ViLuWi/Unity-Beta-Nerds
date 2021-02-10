@@ -13,6 +13,7 @@ public class DoublePlayer : MonoBehaviour
     private float _gravity = 5f;
     private float _directionY;
     private bool _canDoubleJump = false;
+    private Animator run_anim;
 
     IEnumerator Start()
     {
