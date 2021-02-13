@@ -13,14 +13,13 @@ public class DoublePlayer : MonoBehaviour
     private float _gravity = 5f;
     private float _directionY;
     private bool _canDoubleJump = false;
-    private Animator run_anim;
 
     IEnumerator Start()
     {
         yield return null;
         _controller = GetComponent<CharacterController>();
         var checkForMazeGame = PlayerPrefs.GetFloat("MazeRunnerFinished", 0);
-        if( checkForMazeGame == 1)
+        if (checkForMazeGame == 1)
         {
             PlayerPrefs.DeleteAll();
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(61.84f, 10.29f, -20.476f);
