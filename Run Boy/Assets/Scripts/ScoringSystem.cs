@@ -8,9 +8,11 @@ public class ScoringSystem : MonoBehaviour
     public AudioSource collectSound;
 
 
-    void OnTriggerEnter2D(Collider2D collider) {
+    void OnTriggerEnter2D(Collider2D collider)
+    {
         collectSound.Play();
         LevelMenu.RBStars += 1;
         SceneManager.LoadScene(0);
     }
+
 }
