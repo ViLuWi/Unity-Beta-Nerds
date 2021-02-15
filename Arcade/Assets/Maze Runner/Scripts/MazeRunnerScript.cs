@@ -92,7 +92,7 @@ public class MazeRunnerScript : MonoBehaviour
             MazeRunnerFinished = 1;
             PlayerPrefs.SetFloat("MazeRunnerFinished", 1);
             SceneManager.LoadScene("Arcade");
-            
+            StarCounter.arcade_stars += 1;
         }
     }
 }

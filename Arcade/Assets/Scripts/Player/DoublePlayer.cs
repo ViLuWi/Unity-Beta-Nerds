@@ -14,6 +14,7 @@ public class DoublePlayer : MonoBehaviour
     private float _directionY;
     private bool _canDoubleJump = false;
     private Animator run_anim;
+    public AudioSource playSound;
 
     IEnumerator Start()
     {
@@ -26,7 +27,6 @@ public class DoublePlayer : MonoBehaviour
             PlayerPrefs.DeleteAll();
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(61.84f, 10.29f, -20.476f);
             print("HHH");
-            StarCounter.arcade_stars += 1;
         }
         if( checkForRunBoyGame == 1)
         {
@@ -57,6 +57,8 @@ public class DoublePlayer : MonoBehaviour
             {
                 _directionY = _jumpHeight * _doubleJumpMultiply;
                 _canDoubleJump = false;
+                playSound.Play();
+
             }
         }
         // set gravity
