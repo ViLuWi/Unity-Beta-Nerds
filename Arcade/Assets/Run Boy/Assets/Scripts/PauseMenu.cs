@@ -9,40 +9,50 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+        public float RunBoyFinished = 0;
 
 
-    void Start() {
+    void Start()
+    {
         GameIsPaused = false;
-                Cursor.visible = true;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             if (GameIsPaused)
             {
                 Resume();
-            } else {
+            }
+            else
+            {
                 Pause();
             }
         }
     }
 
-    public void Resume() {
+    public void Resume()
+    {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    void Pause() {
+    void Pause()
+    {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
-    public void Quit(){
-        SceneManager.LoadScene("Run Boy");
+    public void Quit()
+    {
+        RunBoyFinished = 1;
+        PlayerPrefs.SetFloat("RunBoyFinished", 1);
+        SceneManager.LoadScene("Arcade");
     }
 }

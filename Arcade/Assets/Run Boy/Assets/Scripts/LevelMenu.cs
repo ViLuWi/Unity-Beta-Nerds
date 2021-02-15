@@ -13,6 +13,7 @@ public class LevelMenu : MonoBehaviour
 
     public static int RBStars;
     public GameObject starDisplay;
+    public float RunBoyFinished = 0;
 
     public void Start()
     {
@@ -28,7 +29,10 @@ public class LevelMenu : MonoBehaviour
     }
 
     public void QuitGame()
-    {
-        SceneManager.LoadScene("Arcade");
-    }
+        {
+            RunBoyFinished = 1;
+            PlayerPrefs.SetFloat("RunBoyFinished", 1);
+            SceneManager.LoadScene("Arcade");
+            
+        }
 }

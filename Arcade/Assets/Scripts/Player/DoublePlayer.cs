@@ -20,12 +20,18 @@ public class DoublePlayer : MonoBehaviour
         yield return null;
         _controller = GetComponent<CharacterController>();
         var checkForMazeGame = PlayerPrefs.GetFloat("MazeRunnerFinished", 0);
+        var checkForRunBoyGame = PlayerPrefs.GetFloat("RunBoyFinished", 0);
         if( checkForMazeGame == 1)
         {
             PlayerPrefs.DeleteAll();
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(61.84f, 10.29f, -20.476f);
             print("HHH");
             StarCounter.arcade_stars += 1;
+        }
+        if( checkForRunBoyGame == 1)
+        {
+            PlayerPrefs.DeleteAll();
+            GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(48.8f, 3.2f, 3.86f);
         }
     }
 
