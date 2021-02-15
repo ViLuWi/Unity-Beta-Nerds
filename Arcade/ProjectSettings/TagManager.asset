@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Walls
+  - Door
+  - FinalKey
+  - Enemy
+  - Keys
+  - MazeRunner
   layers:
   - Default
   - TransparentFX
