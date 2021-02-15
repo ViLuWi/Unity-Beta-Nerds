@@ -26,7 +26,8 @@ public class Score : MonoBehaviour
         }
 
         if (lastScore >= topScore)
-        {
+        {   
+            StarCounter.arcade_stars += 1;
             SceneManager.LoadScene("Arcade");
         }
     }

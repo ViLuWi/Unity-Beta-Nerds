@@ -10,7 +10,7 @@ public class StarCounter : MonoBehaviour
 
     void Start()
     {
-        arcade_stars += 1;
+        arcade_stars += 0;
         scoreText.GetComponent<Text>().text = "Sterne:" + arcade_stars;
     }
 }
