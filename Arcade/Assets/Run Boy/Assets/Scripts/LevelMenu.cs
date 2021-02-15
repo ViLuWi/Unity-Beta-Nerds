@@ -14,18 +14,21 @@ public class LevelMenu : MonoBehaviour
     public static int RBStars;
     public GameObject starDisplay;
 
-    public void Start(){
+    public void Start()
+    {
         starDisplay.GetComponent<TextMeshProUGUI>().text = "Diamonds: " + RBStars;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
-    public void PlayLevelOne ()
+    public void PlayLevelOne()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level 01");
         PauseMenu.GameIsPaused = false;
     }
 
-    public void QuitGame ()
+    public void QuitGame()
     {
-        SceneManager.LoadScene(MainGameScene);
+        SceneManager.LoadScene("Arcade");
     }
 }

@@ -13,6 +13,8 @@ public class PauseMenu : MonoBehaviour
 
     void Start() {
         GameIsPaused = false;
+                Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
@@ -41,6 +43,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Quit(){
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Run Boy");
     }
 }

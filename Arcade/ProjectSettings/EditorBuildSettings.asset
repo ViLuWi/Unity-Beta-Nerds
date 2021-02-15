@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MazeRunner.unity
     guid: 605e1507894e19641896c0b01e4aa970
+  - enabled: 1
+    path: Assets/Run Boy/Assets/Scenes/Run Boy.unity
+    guid: 98bc34d8f25e24dae934b1e5f9896c52
+  - enabled: 1
+    path: Assets/Run Boy/Assets/Scenes/Level 01.unity
+    guid: e6964f72ab083c74ca31ad6e8d843378
   m_configObjects: {}
