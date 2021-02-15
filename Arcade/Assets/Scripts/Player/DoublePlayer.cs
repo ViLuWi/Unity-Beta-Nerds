@@ -25,6 +25,7 @@ public class DoublePlayer : MonoBehaviour
             PlayerPrefs.DeleteAll();
             GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(61.84f, 10.29f, -20.476f);
             print("HHH");
+            StarCounter.arcade_stars += 1;
         }
     }
 

@@ -17,7 +17,7 @@ public class LoadNewScene : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("MazeRunner");
         }
     }
 }

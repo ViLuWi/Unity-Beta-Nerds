@@ -18,7 +18,7 @@ public class LoadArcade : MonoBehaviour
         if(other.tag == "Player")
         {
             print("Back to arcade");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Arcade");
         }
     }
 }

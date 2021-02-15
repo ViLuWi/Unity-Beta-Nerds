@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/arcade.unity
+    path: Assets/Scenes/Arcade.unity
     guid: 8437da4b3c318b246b5a3d06830fe534
   - enabled: 1
     path: Assets/Scenes/MazeRunner.unity
