@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Joodle Dump/Assets/JoodleDump.unity
     guid: b477aaedfa8794e41b2fe586a7d35273
+  - enabled: 1
+    path: Assets/Corsairs/Assets/Scenes/Corsairs.unity
+    guid: c784cd8d8d721fc4da1dde8e430495f9
   m_configObjects: {}

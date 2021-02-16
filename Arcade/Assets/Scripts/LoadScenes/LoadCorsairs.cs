@@ -18,8 +18,6 @@ public class LoadCorsairs : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
-            m_MyAudioSource = GetComponent<AudioSource>();
-            m_MyAudioSource.Play();
             SceneManager.LoadScene("Corsairs");
         }
     }
