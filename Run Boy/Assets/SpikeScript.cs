@@ -14,3 +14,4 @@ public class SpikeScript : MonoBehaviour
         SceneManager.LoadScene(currentSceneName);
     }
 }
+
